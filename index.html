@@ -42,7 +42,10 @@
     <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 </head>
 
-<body class="bg-white dark:bg-black">
+<body
+    class="bg-white dark:bg-black"
+    x-data="alpineAppBody"
+>
     <header class="fixed w-full z-30">
         <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -59,9 +62,19 @@
                     </span>
                 </a>
 
-                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse mx-2 gap-2">
                     <a
-                    href="https://sun.eduzz.com/2185061"
+                        href="https://sun.eduzz.com/2185061"
+                        class="text-white bg-green-600 hover:bg-green-900 focus:ring-4 focus:outline-none focus:ring-green-300
+                        font-medium border border-green-900
+                        rounded-lg text-sm px-4 py-2 text-center dark:border-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800
+                        transition ease-in-out delay-50 hover:scale-125"
+                    >
+                        Ajuda
+                    </a>
+
+                    <a
+                        href="https://sun.eduzz.com/2185061"
                         class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300
                         font-medium border border-purple-900
                         rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-800 dark:border-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800
@@ -70,7 +83,21 @@
                         Comprar agora
                     </a>
 
-                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                    <!-- <a
+                        href="./whatsapp.html" target="_blank"
+                        class="block sm:w-full text-left px-2 py-1 text-sm font-medium text-center text-white border border-green-200 rounded-lg sm:w-auto bg-green-600 hover:bg-green-900 focus:ring-4 focus:ring-green-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-green-800
+                        transition ease-in-out delay-50 hover:scale-125"
+                    >
+                        Ajuda
+                    </a> -->
+
+                    <button
+                        data-collapse-toggle="navbar-sticky"
+                        type="button"
+                        class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                        aria-controls="navbar-sticky"
+                        aria-expanded="false"
+                    >
                         <span class="sr-only">Menu</span>
                         <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -80,61 +107,30 @@
 
                 <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                     <ul
-                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                        class="flex flex-col p-2 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
                     >
 
-                        <li>
-                            <button id="know-more-home-button"
-                                onclick="scrollToSection('know-more-home-button','know-more-home')"
-                                data-goto-anchor="know-more-home"
-                                class="block sm:w-full text-left py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">DZAD</button>
-                        </li>
-
-                        <li>
-                            <button id="know-more-learning-button"
-                                onclick="scrollToSection('know-more-learning-button', 'know-more-learning')"
-                                data-goto-anchor="know-more-learning"
-                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
-                                Aprendizagem
-                            </button>
-                        </li>
-                        <li>
-                            <button id="know-more-guarantee-button"
-                                onclick="scrollToSection('know-more-guarantee-button', 'know-more-guarantee')"
-                                data-goto-anchor="know-more-guarantee"
-                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Garantia</button>
-                        </li>
-                        <li>
-                            <button id="know-more-feedback-button"
-                                onclick="scrollToSection('know-more-feedback-button', 'know-more-feedback')"
-                                data-goto-anchor="know-more-feedback"
-                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Feedback</button>
-                        </li>
-                        <li>
-                            <button id="know-more-buy-button"
-                                onclick="scrollToSection('know-more-buy-button', 'know-more-buy')"
-                                data-goto-anchor="know-more-buy"
-                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Investimento</button>
-                        </li>
-                        <li>
-                            <button id="know-more-doubts-button"
-                                onclick="scrollToSection('know-more-doubts-button', 'know-more-doubts')"
-                                data-goto-anchor="know-more-doubts"
-                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">FAQ</button>
-                        </li>
-
-                        <li class="sm:p-2">
-                            <a
-                                href="./whatsapp.html" target="_blank"
-                                class="block sm:w-full text-left px-2 py-1 text-sm font-medium text-center text-white border border-green-200 rounded-lg sm:w-auto bg-green-600 hover:bg-green-900 focus:ring-4 focus:ring-green-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-green-800
-                                transition ease-in-out delay-50 hover:scale-125"
-                            >
-                                Ajuda
-                            </a>
-                        </li>
+                        <template
+                            x-for="(menuItem, menuItemIndex) in topMenuItems"
+                            x-key="menuItemIndex"
+                        >
+                            <li class="py-2">
+                                <button id="know-more-home-button"
+                                    ab-data-goto-anchor="know-more-home"
+                                    x-bind="menuItem.attributes"
+                                    x-bind:class="[
+                                        'block sm:w-full text-left py-2 px-2 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent',
+                                        'md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700',
+                                        'dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700',
+                                    ]"
+                                    x-bind:class="menuItem.class"
+                                    x-text="menuItem.label"
+                                ></button>
+                            </li>
+                        </template>
 
                         <!--
-                        <li>
+                        <li class="py-2">
                             <a
                                 href="https://sun.eduzz.com/2185061"
                                 class="text-white bg-purple-600 hover:bg-purple-700 inline-flex items-center justify-center w-full px-2 py-1 mb-2 mr-2 text-sm font-medium border border-purple-900 rounded-lg sm:w-auto focus:outline-none focus:z-10 focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-700 dark:bg-purple-800 dark:border-purple-600 dark:hover:text-white dark:hover:bg-purple-700
@@ -221,11 +217,17 @@
             <!-- Row -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <div class="text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
-                        Domine a programação e faça carreira na área de desenvolvimento web.
+                    <h2 class="text-center mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white">
+                        Domine a programação web e faça carreira na área de desenvolvimento web.
                     </h2>
+                    <blockquote class="text-2xl font-semibold italic text-center text-gray-500 sm:text-lg dark:text-white my-2">
+                        Seja um profissional
+                        <span class="mx-2 before:block before:absolute before:-inset-1 before:-skew-y-3 before:bg-pink-500 relative inline-block">
+                            <span class="relative text-white">diferenciado</span>
+                        </span>
+                    </blockquote>
                     <p class="mb-8 font-light lg:text-xl" id="text-content">
-                        Há mais de 13 anos trilhando o fascinante caminho da Tecnologia da Informação, acumulei um
+                        Há mais de 13 anos que trabalhoi com Tecnologia da Informação. Nesses anos acumulei um
                         tesouro de conhecimento que estou pronto para compartilhar contigo na <strong>“Jornada do Zero
                             ao Deploy”.</strong> <br /> <br />
 
@@ -522,14 +524,13 @@
                     </div>
                 </div>
             </div>
-            <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
-
-                <img src="./images/selo-de-garantia.png" alt="">
-                <img src="./images/selo-de-garantia.png" alt="">
-                <img src="./images/selo-de-garantia.png" alt="">
-                <img src="./images/selo-de-garantia.png" alt="">
-
-
+            <div class="col-span-2">
+                <div class="flex items-center justify-center md:grid md:grid-cols-2 md:grid-cols-2 md:gap-4">
+                    <img src="./images/selo-de-garantia.png" alt="Selo de garantia">
+                    <!-- <img src="./images/selo-de-garantia.png" alt="Selo de garantia"> -->
+                    <!-- <img src="./images/selo-de-garantia.png" alt="Selo de garantia"> -->
+                    <!-- <img src="./images/selo-de-garantia.png" alt="Selo de garantia"> -->
+                </div>
             </div>
         </div>
     </section>
@@ -614,79 +615,9 @@
                 <!-- Pricing Card -->
                 <div
                     class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
-                    <h3 class="mb-4 text-2xl font-semibold">PLANO AVANÇADO</h3>
-                    <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        <strong class="text-white">Valor ÚNICO</strong> e acesso é <strong class="text-white">VITALÍCIO</strong>,
-                        quaisquer dúvidas ou negociações, entrar em contato
-                    </p>
-
-                    <div class="flex items-baseline justify-center my-8">
-                        <span class="mr-2 text-5xl font-extrabold">R$50,08</span>
-                        <span class="text-gray-500 dark:text-gray-400">/12x </span>
-                    </div>
-                    <!-- List -->
-                    <ul role="list" class="mb-8 space-y-4 text-left">
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Curso completo de programação </span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Do básico ao avançado</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Garantia de <span class="font-semibold">30 dias </span></span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Aulas ao vivo</span>
-                        </li>
-                        <li class="flex items-center space-x-3">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
-                                viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                            <span>Acompanhamento individual</span>
-                        </li>
-                    </ul>
-                    <a href="https://sun.eduzz.com/2185061"
-                        class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-purple-900">
-                        Garanta já o seu</a>
-                </div>
-                <!-- Pricing Card -->
-                <div
-                    class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                     <h3 class="mb-4 text-2xl font-semibold">🎁 Pacote de bônus 1</h3>
                     <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                        Aqui são alguns dos bônus que você irá adquirir
+                        Aqui estão alguns dos bônus que você irá adquirir
                     </p>
                     <div class="flex items-baseline justify-center my-6" />
                 </div>
@@ -754,12 +685,13 @@
                     </li>
                 </ul>
             </div>
+
             <!-- Pricing Card -->
             <div
                 class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
                 <h3 class="mb-4 text-2xl font-semibold">💝 Pacote de bônus 2</h3>
                 <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    Aqui são alguns dos bônus que você irá adquirir
+                    Aqui estão alguns dos bônus que você irá adquirir
                 </p>
                 <div class="flex items-baseline justify-center my-6">
 
@@ -838,6 +770,77 @@
                         <span>Acesso direto a mim para esclarecer suas dúvidas</span>
                     </li>
                 </ul>
+            </div>
+
+            <!-- Pricing Card -->
+            <div
+                class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow dark:border-gray-600 xl:p-8 dark:bg-gray-800 dark:text-white">
+                <h3 class="mb-4 text-2xl font-semibold">PLANO AVANÇADO</h3>
+                <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+                    <strong class="text-white">Valor ÚNICO</strong> e acesso é <strong class="text-white">VITALÍCIO</strong>,
+                    quaisquer dúvidas ou negociações, entrar em contato
+                </p>
+
+                <div class="flex items-baseline justify-center my-8">
+                    <span class="mr-2 text-5xl font-extrabold">R$50,08</span>
+                    <span class="text-gray-500 dark:text-gray-400">/12x </span>
+                </div>
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left">
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Curso completo de programação </span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Do básico ao avançado</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Garantia de <span class="font-semibold">30 dias </span></span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Aulas ao vivo</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400" fill="currentColor"
+                            viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span>Acompanhamento individual</span>
+                    </li>
+                </ul>
+                <a href="https://sun.eduzz.com/2185061"
+                    class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:ring-purple-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-purple-900">
+                    Garanta já o seu</a>
             </div>
         </div>
         </div>
@@ -1253,8 +1256,8 @@
 
     <div class="fixed bottom-2 p-5 px-6 m-0 z-40 w-14 h-14 rounded-lg mb-10">
         <a href="./whatsapp.html" target="_blank">
-            <div class="bg-green-600 w-14 h-14 rounded-full text-white animate-bounce cursor-pointer">
-                <svg class="w-14 h-14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <div class="bg-gray-100 dark:bg-white w-14 h-14 rounded-full text-green-600 animate-bounce cursor-pointer">
+                <svg class="w-12 h-12 pl-2 pt-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
                     <g>
                         <path fill="none" d="M0 0h24v24H0z"></path>
                         <path fill-rule="nonzero" d="M2.004 22l1.352-4.968A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10a9.954 9.954 0 0 1-5.03-1.355L2.004 22zM8.391 7.308a.961.961 0 0 0-.371.1 1.293 1.293 0 0 0-.294.228c-.12.113-.188.211-.261.306A2.729 2.729 0 0 0 6.9 9.62c.002.49.13.967.33 1.413.409.902 1.082 1.857 1.971 2.742.214.213.423.427.648.626a9.448 9.448 0 0 0 3.84 2.046l.569.087c.185.01.37-.004.556-.013a1.99 1.99 0 0 0 .833-.231c.166-.088.244-.132.383-.22 0 0 .043-.028.125-.09.135-.1.218-.171.33-.288.083-.086.155-.187.21-.302.078-.163.156-.474.188-.733.024-.198.017-.306.014-.373-.004-.107-.093-.218-.19-.265l-.582-.261s-.87-.379-1.401-.621a.498.498 0 0 0-.177-.041.482.482 0 0 0-.378.127v-.002c-.005 0-.072.057-.795.933a.35.35 0 0 1-.368.13 1.416 1.416 0 0 1-.191-.066c-.124-.052-.167-.072-.252-.109l-.005-.002a6.01 6.01 0 0 1-1.57-1c-.126-.11-.243-.23-.363-.346a6.296 6.296 0 0 1-1.02-1.268l-.059-.095a.923.923 0 0 1-.102-.205c-.038-.147.061-.265.061-.265s.243-.266.356-.41a4.38 4.38 0 0 0 .263-.373c.118-.19.155-.385.093-.536-.28-.684-.57-1.365-.868-2.041-.059-.134-.234-.23-.393-.249-.054-.006-.108-.012-.162-.016a3.385 3.385 0 0 0-.403.004z"></path>

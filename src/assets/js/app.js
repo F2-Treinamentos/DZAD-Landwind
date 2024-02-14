@@ -1,8 +1,5 @@
-import Alpine from 'alpinejs'
-import 'flowbite';
-
-window.Alpine = Alpine
-Alpine.start();
+import 'flowbite'
+import './alpine-data-init.js'
 
 // scrollAction
 window.scrollToSection = function(buttonId, sectionId) {
