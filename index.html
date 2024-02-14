@@ -45,10 +45,17 @@
     <header class="fixed w-full z-30">
         <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-1 mx-auto">
-                <a class="flex items-center ">
+                <a
+                    class="flex items-center"
+                    onclick="scrollToSection('know-more-home-button','know-more-home')"
+                    data-goto-anchor="know-more-home"
+                >
                     <img src="./images/dzad.png" class="rounded-lg h-12 mr-10 sm:h-11" alt="Landwind Logo" />
-                    <span class="self-center text-xl pl-3 font-semibold whitespace-nowrap dark:text-white">
-                        Do Zero Ao Deploy</span>
+                    <span
+                        class="self-center text-xl pl-3 font-semibold whitespace-nowrap dark:text-white cursor-pointer"
+                    >
+                        Do Zero Ao Deploy
+                    </span>
                 </a>
                 <div class="flex items-center lg:order-2">
                     <img class=" hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex h-12 mr-10 sm:h-11"
