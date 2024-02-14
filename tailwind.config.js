@@ -2,9 +2,12 @@
 module.exports = {
     content: [
         "index.html",
+        "./*.html",
+        "./assets/js/*.js",
+        "./assets/css/*.css",
         "./node_modules/flowbite/**/*.js",
     ],
-    darkMode: 'media',
+    darkMode: 'media', // or 'media' or 'class'
     theme: {
         extend: {
             colors: {

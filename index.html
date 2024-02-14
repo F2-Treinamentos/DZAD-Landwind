@@ -37,14 +37,15 @@
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
-    <link href="./output.css" rel="stylesheet" />
-    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- <link href="./output.css" rel="stylesheet" /> -->
+    <script async defer type="module" src="/src/assets/js/app.js"></script>
+    <!-- <script async defer src="https://buttons.github.io/buttons.js"></script> -->
 </head>
 
 <body class="bg-white dark:bg-black">
     <header class="fixed w-full z-30">
-        <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
-            <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-1 mx-auto">
+        <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+            <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a
                     class="flex items-center"
                     onclick="scrollToSection('know-more-home-button','know-more-home')"
@@ -57,42 +58,43 @@
                         Do Zero Ao Deploy
                     </span>
                 </a>
-                <div class="flex items-center lg:order-2">
-                    <img class=" hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex h-12 mr-10 sm:h-11"
-                        src="./images/dzad-logo-lateral.jpg" alt="">
-                    <!-- hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" -->
 
-                    <button data-collapse-toggle="mobile-menu-2" type="button"
-                        class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                        aria-controls="mobile-menu-2" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <svg class="hidden w-6 h-6" fill="currentColor" viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                                clip-rule="evenodd"></path>
+                <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+                    <a
+                    href="https://sun.eduzz.com/2185061"
+                        class="text-white bg-purple-600 hover:bg-purple-700 focus:ring-4 focus:outline-none focus:ring-purple-300
+                        font-medium border border-purple-900
+                        rounded-lg text-sm px-4 py-2 text-center dark:bg-purple-800 dark:border-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-800
+                        transition ease-in-out delay-50 hover:scale-125"
+                    >
+                        Comprar agora
+                    </a>
+
+                    <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
+                        <span class="sr-only">Menu</span>
+                        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
                         </svg>
                     </button>
                 </div>
-                <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="mobile-menu-2">
-                    <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
+
+                <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+                    <ul
+                        class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700"
+                    >
+
                         <li>
                             <button id="know-more-home-button"
                                 onclick="scrollToSection('know-more-home-button','know-more-home')"
                                 data-goto-anchor="know-more-home"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">DZAD</button>
+                                class="block sm:w-full text-left py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">DZAD</button>
                         </li>
 
                         <li>
                             <button id="know-more-learning-button"
                                 onclick="scrollToSection('know-more-learning-button', 'know-more-learning')"
                                 data-goto-anchor="know-more-learning"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
+                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">
                                 Aprendizagem
                             </button>
                         </li>
@@ -100,46 +102,48 @@
                             <button id="know-more-guarantee-button"
                                 onclick="scrollToSection('know-more-guarantee-button', 'know-more-guarantee')"
                                 data-goto-anchor="know-more-guarantee"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Garantia</button>
+                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Garantia</button>
                         </li>
                         <li>
                             <button id="know-more-feedback-button"
                                 onclick="scrollToSection('know-more-feedback-button', 'know-more-feedback')"
                                 data-goto-anchor="know-more-feedback"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Feedback</button>
+                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-white border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Feedback</button>
                         </li>
                         <li>
                             <button id="know-more-buy-button"
                                 onclick="scrollToSection('know-more-buy-button', 'know-more-buy')"
                                 data-goto-anchor="know-more-buy"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Investimento</button>
+                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">Investimento</button>
                         </li>
                         <li>
                             <button id="know-more-doubts-button"
                                 onclick="scrollToSection('know-more-doubts-button', 'know-more-doubts')"
                                 data-goto-anchor="know-more-doubts"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-gray-400 lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">FAQ</button>
+                                class="block sm:w-full text-left py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-purple-700 lg:p-0 dark:text-white lg:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white lg:dark:hover:bg-transparent dark:border-gray-700">FAQ</button>
                         </li>
 
-                        <li>
+                        <li class="sm:p-2">
                             <a
                                 href="./whatsapp.html" target="_blank"
-                                class="inline-flex items-center justify-center w-full px-2 py-1 text-sm font-medium text-center text-white border border-green-200 rounded-lg sm:w-auto bg-green-600 hover:bg-green-900 focus:ring-4 focus:ring-green-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-green-800
-                                transition ease-in-out delay-100 hover:scale-125"
+                                class="block sm:w-full text-left px-2 py-1 text-sm font-medium text-center text-white border border-green-200 rounded-lg sm:w-auto bg-green-600 hover:bg-green-900 focus:ring-4 focus:ring-green-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-green-800
+                                transition ease-in-out delay-50 hover:scale-125"
                             >
-                                Contato
+                                Ajuda
                             </a>
                         </li>
 
+                        <!--
                         <li>
                             <a
                                 href="https://sun.eduzz.com/2185061"
                                 class="text-white bg-purple-600 hover:bg-purple-700 inline-flex items-center justify-center w-full px-2 py-1 mb-2 mr-2 text-sm font-medium border border-purple-900 rounded-lg sm:w-auto focus:outline-none focus:z-10 focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-700 dark:bg-purple-800 dark:border-purple-600 dark:hover:text-white dark:hover:bg-purple-700
-                                transition ease-in-out delay-100 hover:scale-125"
+                                transition ease-in-out delay-50 hover:scale-125"
                             >
                                 Comprar agora
                             </a>
                         </li>
+                        -->
                     </ul>
                 </div>
             </div>
@@ -163,14 +167,14 @@
                     <a
                     href="./whatsapp.html" target="_blank"
                       class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white border border-green-200 rounded-lg sm:w-auto bg-green-600 hover:bg-green-900 focus:ring-4 focus:ring-green-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-green-800
-                      transition ease-in-out delay-100 hover:scale-125"
+                      transition ease-in-out delay-50 hover:scale-125"
                     >
                      Saber mais
                     </a>
                     <a
                       href="https://sun.eduzz.com/2185061"
                       class="text-white bg-purple-600 hover:bg-purple-700 inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium border border-purple-900 rounded-lg sm:w-auto focus:outline-none focus:z-10 focus:ring-4 focus:ring-purple-200 dark:focus:ring-purple-700 dark:bg-purple-800 dark:border-purple-600 dark:hover:text-white dark:hover:bg-purple-700
-                      transition ease-in-out delay-100 hover:scale-125"
+                      transition ease-in-out delay-50 hover:scale-125"
                     >
                       Garantir minha vaga agora
                     </a>
@@ -188,22 +192,22 @@
             <div
                 class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6  auto-rows-[250px] dark:text-gray-400 gap-8">
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/html.png" width="105">
+                    <img class="transition ease-in-out delay-50 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/html.png" width="105">
                 </span>
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/css.png" width="75" />
+                    <img class="transition ease-in-out delay-50 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/css.png" width="75" />
                 </span>
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/js.png" width="170" />
+                    <img class="transition ease-in-out delay-50 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/js.png" width="170" />
                 </span>
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 p-6 hover:text-gray-900 dark:hover:text-white" src="./images/php.png" width="145" />
+                    <img class="transition ease-in-out delay-50 hover:scale-125 p-6 hover:text-gray-900 dark:hover:text-white" src="./images/php.png" width="145" />
                 </span>
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 h-15 hover:text-gray-900 dark:hover:text-white" src="./images/laravel.png" />
+                    <img class="transition ease-in-out delay-50 hover:scale-125 h-15 hover:text-gray-900 dark:hover:text-white" src="./images/laravel.png" />
                 </span>
                 <span class="flex items-center justify-center cursor-pointer transform">
-                    <img class="transition ease-in-out delay-100 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/github.png"
+                    <img class="transition ease-in-out delay-50 hover:scale-125 hover:text-gray-900 dark:hover:text-white" src="./images/github.png"
                         viewBox="0 0 124 21" fill="currentColor" />
                 </span>
             </div>
@@ -1187,8 +1191,7 @@
                         </span>
                     </p>
                     <button class="button-see-more-content-profile"
-                        onclick="toggleReadMore('.see-more-content-profile', '.button-see-more-content-profile')">Ler
-                        Mais</button>
+                        onclick="toggleReadMore('.see-more-content-profile', '.button-see-more-content-profile')">Ler Mais</button>
 
                     <!-- List -->
                     <ul role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7 dark:border-gray-700">
@@ -1260,8 +1263,8 @@
             </div>
         </a>
     </div>
-    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
-    <script src="./js/app.js"></script>
+    <!-- <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script> -->
+    <!-- <script src="./node_modules/flowbite/dist/flowbite.js"></script> -->
 </body>
 
 </html>
