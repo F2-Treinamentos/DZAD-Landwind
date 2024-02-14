@@ -22,11 +22,12 @@ Make sure that you have [Node.js](https://nodejs.org/en/), [Tailwind CSS](https:
 
 2. Watch for files and compile Tailwind CSS + Flowbite:
 
-```
-npx tailwindcss -i ./input.css -o ./output.css --watch
+```sh
+# npx tailwindcss -i ./input.css -o ./output.css --watch
+npx tailwindcss -i ./src/assets/css/tailwind.css -o ./output/tailwind.css --watch
 ```
 
-3. To deploy you will only need the `index.html` file and the `output.css` styles.
+3. To deploy you will only need the `index.html` file and the `./output/tailwind.css` styles.
 
 Alternatively you can also just directly copy this code into your own projects, whether you use Laravel, React, Vue.js or other frameworks.
 

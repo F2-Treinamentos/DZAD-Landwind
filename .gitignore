@@ -1,1 +1,9 @@
-node_modules/
+node_modules
+*no*commit*
+*No*Commit*
+*NO*COMMIT*
+*.bkp.*
+*.bkp
+*.out
+*.log
+*.zip
