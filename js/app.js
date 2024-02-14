@@ -1,12 +1,14 @@
 // scrollAction
-    function scrollToSection(buttonId, sectionId) {
-        var button = document.getElementById(buttonId);
-        var section = document.getElementById(sectionId);
+function scrollToSection(buttonId, sectionId) {
+    var button = document.getElementById(buttonId);
+    var section = document.getElementById(sectionId);
 
-        button.addEventListener('click', function () {
-            section.scrollIntoView({ behavior: 'smooth' });
-        });
+    if (!button || !section) {
+        return;
     }
+
+    section.scrollIntoView({ behavior: 'smooth' });
+}
 
 // // scrollToSection('know-more-journey-button', 'know-more-journey');
 // // scrollToSection('know-more-resume-button', 'know-more-resume');
@@ -24,3 +26,18 @@ function toggleReadMore(classContent, classButton) {
         btnText.textContent = 'Ler Mais';
     }
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('[data-goto-anchor]').forEach(caller => {
+        caller.addEventListener('click', function (event) {
+            let goto = event.target.dataset.gotoAnchor;
+            let element = goto ? document.querySelector(goto) : null;
+
+            if (!element || !element.scrollIntoView) {
+                return;
+            }
+
+            element.scrollIntoView({ behavior: 'smooth' });
+        });
+    })
+});
