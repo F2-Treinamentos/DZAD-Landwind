@@ -1,6 +1,4 @@
-
 // scrollAction
-
     function scrollToSection(buttonId, sectionId) {
         var button = document.getElementById(buttonId);
         var section = document.getElementById(sectionId);
@@ -10,9 +8,8 @@
         });
     }
 
-    // // scrollToSection('know-more-journey-button', 'know-more-journey');
-    // // scrollToSection('know-more-resume-button', 'know-more-resume');
-
+// // scrollToSection('know-more-journey-button', 'know-more-journey');
+// // scrollToSection('know-more-resume-button', 'know-more-resume');
 
 //ver mais
 function toggleReadMore(classContent, classButton) {
