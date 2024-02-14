@@ -1,5 +1,11 @@
+import Alpine from 'alpinejs'
+import 'flowbite';
+
+window.Alpine = Alpine
+Alpine.start();
+
 // scrollAction
-function scrollToSection(buttonId, sectionId) {
+window.scrollToSection = function(buttonId, sectionId) {
     var button = document.getElementById(buttonId);
     var section = document.getElementById(sectionId);
 
@@ -10,11 +16,10 @@ function scrollToSection(buttonId, sectionId) {
     section.scrollIntoView({ behavior: 'smooth' });
 }
 
-// // scrollToSection('know-more-journey-button', 'know-more-journey');
-// // scrollToSection('know-more-resume-button', 'know-more-resume');
+// scrollToSection('know-more-journey-button', 'know-more-journey');
 
 //ver mais
-function toggleReadMore(classContent, classButton) {
+window.toggleReadMore = function(classContent, classButton) {
     var moreText = document.querySelector(classContent);
     var btnText = document.querySelector(classButton);
 
@@ -39,5 +44,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
             element.scrollIntoView({ behavior: 'smooth' });
         });
-    })
+    });
 });
+
+// import '../../../node_modules/flowbite/dist/flowbite.min.css'
+import '../css/style.css'
