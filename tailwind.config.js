@@ -23,7 +23,16 @@ module.exports = {
                     "800": "#1e40af",
                     "900": "#1e3a8a"
                 }
-            }
+            },
+            fontFamily: {
+                'roboto': ['Roboto', 'sans-serif'],
+                'sans': ['ui-sans-serif', 'system-ui', /* ... */],
+                'serif': ['ui-serif', 'Georgia', /* ... */],
+                'mono': ['ui-monospace', 'SFMono-Regular', /* ... */],
+                'display': ['Oswald', /* ... */], // Add your custom font here
+                'body': ['"Open Sans"', /* ... */],
+                'base': ['base', /* ... */],
+            },
         },
     },
     plugins: [
